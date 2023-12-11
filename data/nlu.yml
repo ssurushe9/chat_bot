@@ -1,0 +1,568 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - Hello?
+    - HEY
+    - hello are you still there
+    - hallo
+    - HI
+    - Hey
+    - Hi
+    - hi!
+    - hi there
+    - Hello
+    - hello its ella
+    - Hola.
+    - welcome
+    - howdy
+    - good day
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - see you later
+    - see you around
+    - goodbye
+    - i'm done
+    - quit
+    - stop
+    - bye
+    - BYEE
+    - GOODBYE
+    - Thanks a lot. See ya later
+    - have a good day. time to go, bye
+    - bye bye
+    - ok i got
+    - bye bye bot
+    - bye for now
+    - bye udo
+    - bye was nice talking to you
+    - bye!
+    - byee
+    - catch you later
+    - farewell
+    - good bye
+    - good bye rasa bot!
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - have a nice day
+
+    
+- intent: affirm
+  examples: |
+    - indeed
+    - correct
+    - that sounds good
+    - yes
+    - yess please
+    - of course
+    - yup
+    - yeah
+    - yes please
+    - yes plz
+    - Sure
+    - Ok
+    - sweet
+    - cool,
+    - yes...
+    - y
+    - ok
+    - ye
+    - okay
+    - That would be great
+    - YES
+    - YUP
+    - Yea
+    - Yeah
+    - Yeah sure
+    - Yep
+    - Yep that's fine
+    - Yep!
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - Yes, I accept
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - no thanks
+    - I dunno
+    - Nothing!
+    - never mind
+    - i decline
+    - i don not like this
+    - i don't want either of those
+    - i don't want to
+    - i don't want to give you my email
+    - i dont want to
+    - i dont want to accept :P lol
+    - i guess it means - no
+    - i'm afraid not
+    - i'm not sure
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: account_opening
+  examples: |
+    - I want to [open account](open_account)
+    - I want to [open bank account](open_account)
+    - [Account opening](open_account)
+    - [open account](open_account)
+    - [account](open_account)
+    - I am thinking to [open account](open_account)
+    - I am thinking to [open bank account](open_account)
+    - [open bank account](open_account)
+    - [bank account](open_account)
+    - can you help me to [open account](open_account)
+    - can u help me to [open account](open_account)
+    - can you open my [bank account](open_account)
+    - can u open my [bank account](open_account)
+    - I wanna [open account](open_account)
+    - [open new account](open_account)
+    - How to [open account](open_account)
+    - How to [open new account](open_account)
+    - how to [open bank account](open_account)
+    - help me to [open new account](open_account)
+    - Help me to [open account](open_account)
+    - [create account](open_account)
+    - I want to [create account](open_account)
+    - I wanna [create account](open_account)
+    - [create new account](open_account)
+    - I want to [create new account](open_account)
+    - I wanna [create new account](open_account)
+    - [create bank account](open_account)
+    - I want to [create bank account](open_account)
+    - I want to [apply for account opening](open_account)
+    - I want to [apply for new account](open_account)
+    - I want to [apply for bank account](open_account)
+    - can u help me [create new account](open_account)
+    - how to [apply for new account](open_account)
+- intent: saving_account
+  examples: |
+    - I want to [open saving account](saving_account)
+    - [saving account opening](saving_account)
+    - [open saving account](saving_account)
+    - [saving account](saving_account)
+    - I am thinking to [open saving account](saving_account)
+    - I want to [open saving bank account](saving_account)
+    - [open saving bank account](saving_account)
+    - [saving bank account](saving_account)
+    - [saving](saving_account)
+    - I wanna open [saving account](saving_account)
+    - I would like to [open saving account](saving_account)
+    - [create saving account](saving_account)
+    - help me [create a saving account](saving_account)
+    - create new [saving account](saving_account)
+- intent: current_account
+  examples: |
+    - I want to open current account
+    - current account opening
+    - open current account
+    - current account
+    - I am thinking to open current account
+    - I want to open current bank account
+    - open current bank account
+    - current bank account
+- intent: user_contact_number
+  examples: |
+    - my number is [+918770758810](user_contact_no)
+    - my mobile number is [+918208715610](user_contact_no)
+    - number is [+918329151904](user_contact_no)
+    - my no is [+918487945612](user_contact_no)
+    - my nu is [+919922018312](user_contact_no)
+    - nu is [+919923456123](user_contact_no)
+    - no is [+919923564879](user_contact_no)
+    - no [+918856471234](user_contact_no)
+    - nu [+918208715610](user_contact_no)
+    - number [+918770758810](user_contact_no)
+    - this is my number [+918770758810](user_contact_no)
+    - this is number [+918208715610](user_contact_no)
+    - this is nu [+918770758810](user_contact_no)
+    - this is no [+918770758810](user_contact_no)
+    - [+918770758810](user_contact_no) my number
+    - [+918770758810](user_contact_no) this is my number
+    - my contact number is [+918770758810](user_contact_no)
+    - contact number is [+918770758810](user_contact_no)
+    - contact number [+918770758810](user_contact_no)
+    - this is contact number [+918770758810](user_contact_no)
+    - this is my contact number [+918770758810](user_contact_no)
+    - the number is [+918770758810](user_contact_no)
+    - mobile number [+918770758810](user_contact_no)
+    - mobile [+918770758810](user_contact_no)
+- intent: user_verify_otp
+  examples: |
+    - [123456](otp)
+    - [154114](otp)
+    - [456375](otp)
+    - [542136](otp)
+- intent: user_name
+  examples: |
+    - my name is [ashish](name)
+    - my name is [rahul](name)
+    - my name is [apneet](name)
+    - [suraj](name) is my name
+    - [akash](name) this side
+    - people call me [bhavesh](name)
+    - I am [rahul](name)
+    - [dhiraj](name)
+    - [dhiraj](name) is here
+    - [rahul](name) this side
+    - my self [bhavesh](name)
+    - this is [bhavesh](name)
+    - I'm [suraj](name)
+    - Hi. I’m [ashish](name)
+    - Hey. I’m [aniket](name)
+    - I’m [rachit](name)
+    - Um, hey . I’m [uddesh](name)
+    - Hi . I’m [ashish](name)
+    - Hey, I’m [ashish](name)
+    - Hi, I’m [nikita](name)
+    - Hi, I’m [sayli](name)
+    - It’s [ashish](name)
+    - [akash](name)
+- intent: user_profession
+  examples: |
+    - I am a [Private](profession) employee
+    - I am a [Self Employed](profession)
+    - I am a [Govt. Employee](profession)
+    - I am a [Student](profession)
+- intent: user_employed
+  examples: |
+    - [6 Months](employed)
+    - [12 Months](employed)
+    - [24 Months](employed)
+- intent: loan_service
+  examples: |
+    - I want [loan](user_loan)
+    - I wanna [loan](user_loan)
+    - I need [loan](user_loan)
+    - I need a [loan](user_loan)
+    - A [loan](user_loan)
+    - A [loan](user_loan) required
+    - [loan](user_loan) required
+    - [loan](user_loan) needed
+    - Want a [loan](user_loan)
+    - Wanna a [loan](user_loan)
+    - Need a [loan](user_loan)
+    - Need [loan](user_loan)
+    - I want a [loan](user_loan)
+    - I wanna a [loan](user_loan)
+    - Can I get [loan](user_loan)
+    - Can I apply for [loan](user_loan)
+    - Can I check for [loan](user_loan)
+    - can you assist me for [loan](user_loan)
+    - can you assist me for a [loan](user_loan)
+    - can you get me to [loan](user_loan)
+    - Is there any opportunity to get [loan](user_loan)
+    - Is there any opportunity for [loan](user_loan)
+    - Is there any [loan](user_loan) available
+    - Is there any chance for [loan](user_loan)
+    - Is there [loan](user_loan) available
+    - I want to check for [loan](user_loan)
+    - Required [loan](user_loan)
+    - Needed [loan](user_loan)
+    - Apply for [loan](user_loan)
+    - Apply for a [loan](user_loan)
+    - Apply [loan](user_loan)
+    - [loan](user_loan) apply
+    - I am here to apply for [loan](user_loan)
+    - I’m here to apply for [loan](user_loan)
+    - I want to apply for [loan](user_loan)
+    - I just want a [loan](user_loan)
+    - I just need a [loan](user_loan)
+    - I’m happy to apply for [loan](user_loan)
+    - I will be happy if you assist me for the [loan](user_loan)
+    - help me for [loan](user_loan)
+    - help me to apply for [loan](user_loan)
+    - Secure a [loan](user_loan)
+    - Get a [loan](user_loan)
+    - Get [loan](user_loan)
+    - Secure [loan](user_loan)
+    - Take me to [loan](user_loan)
+    - Take me to the [loan](user_loan)
+    - Obtain a [loan](user_loan)
+    - How can I apply for [loan](user_loan)
+    - How can I get a [loan](user_loan)
+    - How can I process for a [loan](user_loan)
+    - How can I processed for a [loan](user_loan)
+    - How to get a [loan](user_loan)
+    - looking for [loan](user_loan)
+    - urgent [loan](user_loan)
+    - require urgent [loan](user_loan)
+    - checking for [loan](user_loan)
+    - should I get a [loan](user_loan)
+    - should I get [loan](user_loan)
+    - I’m in need of a [loan](user_loan)
+    - I’m in need of [loan](user_loan)
+    - I am in need of a [loan](user_loan)
+    - I am in need of [loan](user_loan)
+    - I am willing for a [loan](user_loan)
+- intent: User_loan
+  examples: |
+    - I want [personal loan](loan_type)
+    - I wanna [personal loan](loan_type)
+    - I need [personal loan](loan_type)
+    - I need a [personal loan](loan_type)
+    - A [personal loan](loan_type)
+    - A [personal loan](loan_type) required
+    - [personal loan](loan_type) required
+    - [personal loan](loan_type) needed
+    - [personal loan](loan_type)
+    - Want a [personal loan](loan_type)
+    - Wanna a [personal loan](loan_type)
+    - Need a [personal loan](loan_type)
+    - Need [personal loan](loan_type)
+    - I want a [personal loan](loan_type)
+    - I wanna a [personal loan](loan_type)
+    - Can I get [personal loan](loan_type)
+    - Can I apply for [personal loan](loan_type)
+    - Can I check for [personal loan](loan_type)
+    - can you assist me for [personal loan](loan_type)
+    - can you assist me for a [personal loan](loan_type)
+    - can you get me to [personal loan](loan_type)
+    - Is there any opportunity to get [personal loan](loan_type)
+    - Is there any opportunity for [personal loan](loan_type)
+    - Is there any [personal loan](loan_type) available
+    - Is there any chance for [personal loan](loan_type)
+    - Is there [personal loan](loan_type) available
+    - I want to check for [personal loan](loan_type)
+    - Required [personal loan](loan_type)
+    - Needed [personal loan](loan_type)
+    - Apply for [personal loan](loan_type)
+    - Apply for a [personal loan](loan_type)
+    - Apply [personal loan](loan_type)
+    - [personal loan](loan_type) apply
+    - I am here to apply for [personal loan](loan_type)
+    - I’m here to apply for [personal loan](loan_type)
+    - I want to apply for [personal loan](loan_type)
+    - I just want a [personal loan](loan_type)
+    - I just need a [personal loan](loan_type)
+    - I’m happy to apply for [personal loan](loan_type)
+    - I will be happy if you assist me for the [personal loan](loan_type)
+    - help me for [personal loan](loan_type)
+    - help me to apply for [personal loan](loan_type)     
+    - Secure a [personal loan](loan_type)
+    - Get a [personal loan](loan_type)
+    - Get [personal loan](loan_type)
+    - Secure [personal loan](loan_type)
+    - Take me to [personal loan](loan_type)
+    - Take me to the [personal loan](loan_type)
+    - Obtain a [personal loan](loan_type)
+    - How can I apply for [personal loan](loan_type)
+    - How can I get a [personal loan](loan_type)
+    - How can I process for a [personal loan](loan_type)
+    - How can I processed for a [personal loan](loan_type)
+    - How to get a [personal loan](loan_type)
+    - looking for [personal loan](loan_type)
+    - urgent [personal loan](loan_type)
+    - require urgent [personal loan](loan_type)
+    - checking for [personal loan](loan_type)
+    - should I get a [personal loan](loan_type)
+    - should I get [personal loan](loan_type)
+    - I’m in need of a [personal loan](loan_type)
+    - I’m in need of [personal loan](loan_type)
+    - I am in need of a [personal loan](loan_type)
+    - I am in need of [personal loan](loan_type)
+    - I am willing for a [personal loan](loan_type)
+ 
+ 
+ 
+    - I want [home loan](loan_type)
+    - I wanna [home loan](loan_type)
+    - I need [home loan](loan_type)
+    - I need a [home loan](loan_type)
+    - A [home loan](loan_type)
+    - A [home loan](loan_type) required
+    - [home loan](loan_type) required
+    - [home loan](loan_type) needed
+    - [home loan](loan_type)
+    - Want a [home loan](loan_type)
+    - Wanna a [home loan](loan_type)
+    - Need a [home loan](loan_type)
+    - Need [home loan](loan_type)
+    - I want a [home loan](loan_type)
+    - I wanna a [home loan](loan_type)
+    - Can I get [home loan](loan_type)
+    - Can I apply for [home loan](loan_type)
+    - Can I check for [home loan](loan_type)
+    - can you assist me for [home loan](loan_type)
+    - can you assist me for a [home loan](loan_type)
+    - can you get me to [home loan](loan_type)
+    - Is there any opportunity to get [home loan](loan_type)
+    - Is there any opportunity for [home loan](loan_type)
+    - Is there any [home loan](loan_type) available
+    - Is there any chance for [home loan](loan_type)
+    - Is there [home loan](loan_type) available
+    - I want to check for [home loan](loan_type)
+    - Required [home loan](loan_type)
+    - Needed [home loan](loan_type)
+    - Apply for [home loan](loan_type)
+    - Apply for a [home loan](loan_type)
+    - Apply [home loan](loan_type)
+    - [home loan](loan_type) apply
+    - I am here to apply for [home loan](loan_type)
+    - I’m here to apply for [home loan](loan_type)
+    - I want to apply for [home loan](loan_type)
+    - I just want a [home loan](loan_type)
+    - I just need a [home loan](loan_type)
+    - I’m happy to apply for [home loan](loan_type)
+    - I will be happy if you assist me for the [home loan](loan_type)
+    - help me for [home loan](loan_type)
+    - help me to apply for [home loan](loan_type)     
+    - Secure a [home loan](loan_type)
+    - Get a [home loan](loan_type)
+    - Get [home loan](loan_type)
+    - Secure [home loan](loan_type)
+    - Take me to [home loan](loan_type)
+    - Take me to the [home loan](loan_type)
+    - Obtain a [home loan](loan_type)
+    - How can I apply for [home loan](loan_type)
+    - How can I get a [home loan](loan_type)
+    - How can I process for a [home loan](loan_type)
+    - How can I processed for a [home loan](loan_type)
+    - How to get a [home loan](loan_type)
+    - looking for [home loan](loan_type)
+    - urgent [home loan](loan_type)
+    - require urgent [home loan](loan_type)
+    - checking for [home loan](loan_type)
+    - should I get a [home loan](loan_type)
+    - should I get [home loan](loan_type)
+    - I’m in need of a [home loan](loan_type)
+    - I’m in need of [home loan](loan_type)
+    - I am in need of a [home loan](loan_type)
+    - I am in need of [home loan](loan_type)
+    - I am willing for a [home loan](loan_type)
+
+
+
+    - I want [car loan](loan_type)
+    - I wanna [car loan](loan_type)
+    - I need [car loan](loan_type)
+    - I need a [car loan](loan_type)
+    - A [car loan](loan_type)
+    - A [car loan](loan_type) required
+    - [car loan](loan_type) required
+    - [car loan](loan_type) needed
+    - [car loan](loan_type)
+    - Want a [car loan](loan_type)
+    - Wanna a [car loan](loan_type)
+    - Need a [car loan](loan_type)
+    - Need [car loan](loan_type)
+    - I want a [car loan](loan_type)
+    - I wanna a [car loan](loan_type)
+    - Can I get [car loan](loan_type)
+    - Can I apply for [car loan](loan_type)
+    - Can I check for [car loan](loan_type)
+    - can you assist me for [car loan](loan_type)
+    - can you assist me for a [car loan](loan_type)
+    - can you get me to [car loan](loan_type)
+    - Is there any opportunity to get [car loan](loan_type)
+    - Is there any opportunity for [car loan](loan_type)
+    - Is there any [car loan](loan_type) available
+    - Is there [car loan](loan_type) available
+    - I want to check for [car loan](loan_type)
+    - Required [car loan](loan_type)
+    - Needed [car loan](loan_type)
+    - Apply for [car loan](loan_type)
+    - Apply for a [car loan](loan_type)
+    - Apply [car loan](loan_type)
+    - [car loan](loan_type) apply
+    - I am here to apply for [car loan](loan_type)
+    - I’m here to apply for [car loan](loan_type)
+    - I want to apply for [car loan](loan_type)
+    - I just want a [car loan](loan_type)
+    - I just need a [car loan](loan_type)
+    - I’m happy to apply for [car loan](loan_type)
+    - I will be happy if you assist me for the [car loan](loan_type)
+    - help me for [car loan](loan_type)
+    - help me to apply for [car loan](loan_type)     
+    - Secure a [car loan](loan_type)
+    - Get a [car loan](loan_type)
+    - Get [car loan](loan_type)
+    - Secure [car loan](loan_type)
+    - Take me to [car loan](loan_type)
+    - Take me to the [car loan](loan_type)
+    - Obtain a [car loan](loan_type)
+    - How can I apply for [car loan](loan_type)
+    - How can I get a [car loan](loan_type)
+    - How can I process for a [car loan](loan_type)
+    - How can I processed for a [car loan](loan_type)
+    - How to get a [car loan](loan_type)
+    - looking for [car loan](loan_type)
+    - urgent [car loan](loan_type)
+    - require urgent [car loan](loan_type)
+    - checking for [car loan](loan_type)
+    - should I get a [car loan](loan_type)
+    - should I get [car loan](loan_type)
+    - I’m in need of a [car loan](loan_type)
+    - I’m in need of [car loan](loan_type)
+    - I am in need of a [car loan](loan_type)
+    - I am in need of [car loan](loan_type)
+    - I am willing for a [car loan](loan_type)
+
+
+- lookup: name
+  examples: |
+    - barjraj
+    - ramdin verma
+    - sharat chandran
+
+    

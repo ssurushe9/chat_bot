@@ -1,0 +1,164 @@
+version: '3.1'
+intents:
+- account_opening
+- affirm
+- bot_challenge
+- current_account
+- deny
+- goodbye
+- greet
+- loan_service
+- mood_great
+- mood_unhappy
+- saving_account
+- user_contact_number
+- user_name
+- user_verify_otp
+- User_loan
+- user_profession
+- user_employed
+entities:
+- user_loan
+- user_contact_no
+- name
+- otp
+- open_account
+- loan_type
+- profession
+- employed
+slots:
+  open_account:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: open_account
+  user_contact_no:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_contact_no
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  user_loan:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_loan
+  loan_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: loan_type
+  otp:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: otp
+  profession:
+    type: text
+    mappings:
+    - type: custom
+      entity: private
+  employed:
+    type: text
+    mappings:
+    - type: custom
+      entity: 6 months
+actions:
+- action_extract_name
+- action_extract_number
+- utter_ask_apply
+- utter_ask_name
+- utter_ask_problem
+- utter_ask_user_contact_no
+- utter_goodbye
+- utter_greeting_loan
+- utter_happy
+- utter_welcome
+- action_send_otp
+- action_verify_otp
+- action_save_type_loan
+- action_save_profession
+- action_save_employed
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_welcome:
+  - text: Hi ! I am EVA, your personal assistant to help you with Youth Bank related queries.
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iam_bot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_name:
+  - text: May I know your name please?
+  utter_ask_problem:
+  - text: Hello {name}, How can I help you today?
+  utter_greeting_loan:
+  - text: I am happy to assist you for loan. Do you have an account with Youth Bank?
+  utter_ask_user_contact_no:
+  - text: Please enter your mobile number with country code.
+  utter_ask_otp:
+  - text: Please enter the OTP received at {user_contact_no}
+  utter_ask_type_loan:
+    - text: Which type of loan you want? we have
+      buttons:
+      - title: "Personal loan"
+        payload: "Personal_loan"
+      - title: "Home loan"
+        payload: "Home_loan"
+      - title: "Car loan"
+        payload: "Car_loan"
+  utter_ask_how_old_account:
+  - text: Is your account more than 6 months old?
+    buttons:
+      - title: "Yes"
+        payload: /affirm
+      - title: "No"
+        payload: /deny
+  utter_ask_profession:
+  - text: Please select your profession
+    buttons:
+      - title: "Private"
+        payload: "profession"
+      - title: "Self Employed"
+        payload: "profession"
+      - title: "Govt. Employee"
+        payload: "profession"
+      - title: "Student"
+        payload: "profession"
+  utter_ask_employed:
+  - text: How long have you been employed(in months)?
+    buttons:
+      - title: "6 Months"
+        payload: "employed"
+      - title: "12 Months"
+        payload: "employed"
+      - title: "24 Months"
+        payload: "employed"
+  utter_ask_apply:
+  - text: If you wish to apply for, please click here.
+  utter_ask_documents:
+  - text: Please provide Documents as listed.
+  utter_submitted_doc:
+  - text: "'Your Documents has been submitted succesfully. Your Request ID is .Our representative will get in touch with you shortly.'"
+  utter_thanks:
+  - text: You're welcome! Do come back if you have more questions.!
+  utter_account_opening:
+  - text: Which type of account you want to open?
+  utter_saving_account:
+  - text: Please select the document that you want to upload.
+  utter_answer:
+  - text: Your name is {name} and number is {user_contact_no}
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

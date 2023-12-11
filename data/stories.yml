@@ -1,0 +1,145 @@
+version: "3.1"
+
+stories:
+
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
+
+
+#- story: type of  account
+#  steps:
+#  - action: utter_welcome
+#  - intent: greet
+#  - action: utter_ask_name
+#  - intent: user_name
+#  - action: utter_ask_problem
+#  - intent: account_opening
+#  - action: utter_account_opening
+#  - intent: saving_account
+#  - action: utter_saving_account
+#  - intent: affirm
+#  - action: utter_happy
+#
+#
+#- story: opening saving account
+#  steps:
+#  - action: utter_welcome
+#  - intent: greet
+#  - action: utter_ask_name
+#  - intent: user_name
+#  - action: utter_ask_problem
+#  - intent: saving_account
+#  - action: utter_saving_opening
+#  - intent: affirm
+#  - action: utter_happy
+
+#- story: interactive_story_1
+#  steps:
+#  - intent: greet
+#  - action: utter_welcome
+#  - action: utter_ask_name
+#  - intent: user_name
+#    entities:
+#    - name: akash
+#  - action: action_extract_name
+#  - action: utter_ask_user_contact_no
+#  - intent: user_contact_number
+#    entities:
+#    - user_contact_no: +918208715610
+#  - action: action_extract_number
+#  - slot_was_set:
+#    - user_contact_no: +918208715610
+#  - action: action_send_otp
+#  - intent: user_verify_otp
+#    entities:
+#      - otp: 123456
+#  - slot_was_set:
+#      - otp: 123456
+#  - action: action_verify_otp
+#  - action: utter_ask_problem
+#  - intent: loan_service
+#    entities:
+#    - user_loan: loan
+#  - slot_was_set:
+#    - user_loan: loan
+#  - action: utter_ask_type_loan
+#  - intent: User_loan
+#    entities:
+#    - loan_type: I want personal loan
+#  - slot_was_set:
+#    - loan_type: I want personal loan
+#  - action: action_save_type_loan
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - action: utter_ask_name
+  - intent: user_name
+    entities:
+    - name: akash
+  - action: action_extract_name
+  - action: utter_ask_problem
+  - intent: loan_service
+    entities:
+    - user_loan: loan
+  - slot_was_set:
+    - user_loan: loan
+  - action: utter_greeting_loan
+  - intent: affirm
+  - action: utter_ask_user_contact_no
+  - intent: user_contact_number
+    entities:
+    - user_contact_no: +918208715610
+  - action: action_extract_number
+  - slot_was_set:
+    - user_contact_no: +918208715610
+  - action: action_send_otp
+  - intent: user_verify_otp
+    entities:
+      - otp: 123456
+  - slot_was_set:
+      - otp: 123456
+  - action: action_verify_otp
+  - action: utter_ask_type_loan
+  - intent: User_loan
+    entities:
+    - loan_type: I want personal loan
+  - slot_was_set:
+    - loan_type: I want personal loan
+  - action: action_save_type_loan
+  - action: utter_ask_how_old_account
+  - intent: affirm
+  - action: utter_ask_profession
+  - intent: user_profession
+    entities:
+    - profession: private
+  - slot_was_set:
+    - profession: private
+#  - action: action_save_profession
+  - action: utter_ask_employed
+  - intent: user_employed
+    entities:
+      - employed: 6 months
+  - slot_was_set:
+      - employed: 6 months
+  - action: action_save_employed
+#  - action:
+
